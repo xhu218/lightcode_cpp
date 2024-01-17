@@ -5,24 +5,9 @@
 #include <string>
 using namespace std;
 
-void print_func(void (*pf)(int  ,int  ))
-{
-    (*pf)(1,2);
-    cout << "print is done!" << endl;
-}
+
  
-void my_func(int a ,int b)
-{
-    cout << "the call of my_func" << a << "____"<< b << endl;
-}
- 
-int main1()
-{
-    print_func(my_func);
-  
-    return 0;
-}
-#include <stdio.h>
+
 int main1516() {
     int n;
     //while (scanf("%d", &n) != EOF) 
@@ -120,7 +105,7 @@ int main()
     cout<<"a="<<a<<"*a="<<*a<<endl;
 
 
-    */
+  
 
     int arr1[] = { 1,2,3,4,5,6,7,8,9,10 };
 	int arr2[10] = { 0 };
@@ -135,9 +120,12 @@ int main()
 
     struct STUDENT person = { "Pierre de Fermat",46,new int(3) };
 	struct STUDENT person_copy = { 0 };
+
+    */
  
 	/* 使用memcpy拷贝结构体: */
     
+    /*
 	memcpy(&person_copy, &person, sizeof(person));
     person_copy.a = new int(*person.a);
     char name1[]="wfg";
@@ -148,8 +136,16 @@ int main()
     printf("person_copy: %s, %d %d \n", person_copy.name, person_copy.age,*person_copy.a);
 
     cout<<"sizeofint = "<<sizeof(int)<<endl;;
+    */
+
+    //函数指针
+     print_func(my_func);
 
 
+
+    cout<<"hello world"<<endl;
+    queen q;
+    cout<<q.fact(10)<<endl;
    return 0;
 }
 

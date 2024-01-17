@@ -10,4 +10,10 @@
 
 };
 
+
+void print_func(void (*pf)(int  ,int  ));
+
+ 
+void my_func(int a ,int b);
+
 #endif
