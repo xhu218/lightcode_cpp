@@ -1,5 +1,6 @@
 #include <iostream>
 #include "queen.hh"
+#include "vector.hh"
 #include <string.h>
 #include <stdio.h>
 #include <string>
@@ -10,7 +11,7 @@ int main()
 {   
 
  
-
+  
   //_fun_virtualfun();
   //fun_testmain();
   //fun_testfan();
