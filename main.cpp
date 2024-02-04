@@ -13,6 +13,8 @@ int main()
 
   //_fun_virtualfun();
   //fun_testmain();
-   return 0;
+  //fun_testfan();
+  fun_testfan1();
+  return 0;
 }
 
