@@ -323,9 +323,8 @@ void fun_testfan() {
     }
 }
 
-void fun_testfan1()
-{
-    
+void fun_testfan1() {
+
     Vector<Stack<string>> vs(2);
     vs[0].enquence("basic_string<char> 11");
     vs[0].enquence("basic_string<char> 22");
@@ -372,18 +371,15 @@ void fun_testfan1()
         cout << endl;
     }
 
-
-
-    Vector<Vector<string> > vs1;
-  vs1[0][0] = "00";vs1[0][1] = "01";
-  vs1[1][0] = "10";vs1[1][1] = "11";
-  for(int i=0;i<vs1.getsize();i++)
-  {
-    for(int j =0;j<vs1[i].getsize();j++)
-    {
-      cout<<vs1[i][j]<< " ";
+    Vector<Vector<string>> vs1;
+    vs1[0][0] = "00";
+    vs1[0][1] = "01";
+    vs1[1][0] = "10";
+    vs1[1][1] = "11";
+    for (int i = 0; i < vs1.getsize(); i++) {
+        for (int j = 0; j < vs1[i].getsize(); j++) {
+            cout << vs1[i][j] << " ";
+        }
+        cout << endl;
     }
-    cout<<endl;
-  }
-    
 }
