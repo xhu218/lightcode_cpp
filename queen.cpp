@@ -383,3 +383,20 @@ void fun_testfan1() {
         cout << endl;
     }
 }
+
+void func1(const char* a) { cout << "a = " << a << endl; }
+void func2(const char a[]) { cout << "a = " << a << endl; }
+
+void func3(char* a) { cout << "a = " << a << endl; }
+
+void fun_testpara_const() {
+    func1("a");
+    func2("a");
+    char* a = new char[10];
+
+    strcpy(a, "abc");
+
+    func3(a);
+    delete []a;
+    a = nullptr;
+}

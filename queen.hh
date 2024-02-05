@@ -35,6 +35,14 @@ class queen {
 class A {
   public:
     virtual void print(void) { cout << "A:print" << endl; }
+    A() {}
+    A(const A& a) {
+        this->m_a = a.m_a;
+        cout << "copy contruct" << endl;
+    }
+
+  private:
+    int m_a;
 };
 
 class B : public A {
@@ -92,4 +100,38 @@ void fun_testfan();
 
 void fun_testfan1();
 
+void fun_testpara_const();
+
+inline void func(const A a) {}
+inline void func2(const A& a) {}
+inline A& func1() {
+    static A a;
+    return a;
+}
+
+inline void fun_test_copy_construct() {
+
+    A a;
+    A b(a);   //会      调用一次copy构造函数
+    func(a);  //会      调用一次copy构造函数
+    func1();  //不会    调用一次copy构造函数
+    func2(a); //不会    调用一次copy构造函数
+}
+
+class A1 {
+  public:
+    void show() { cout << "A1:show()" << endl; }
+};
+class A2 {
+  public:
+    void show() { cout << "A2:show()" << endl; }
+};
+class A3 {
+  public:
+    void show() { cout << "A3:show()" << endl; }
+};
+template <class T> class D : public T {
+  public:
+    void show1() { cout << "D:show()" << endl; }
+};
 #endif
