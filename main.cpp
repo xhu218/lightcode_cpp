@@ -19,6 +19,8 @@ int main()
   //fun_testfan1();
 
   fun_testtemplateinherit();
+
+  
   
   return 0;
 }
