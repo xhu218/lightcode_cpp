@@ -134,4 +134,14 @@ template <class T> class D : public T {
   public:
     void show1() { cout << "D:show()" << endl; }
 };
+
+inline void fun_testtemplateinherit() {
+    D<A1> d1;
+    d1.show1();
+    d1.show();
+
+    D<A2> d2;
+    d2.show1();
+    d2.show();
+}
 #endif

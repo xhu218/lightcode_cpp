@@ -18,14 +18,7 @@ int main()
   //fun_testfan();
   //fun_testfan1();
 
-  D<A1> d1;
-  d1.show1();
-  d1.show();
-
-  D<A2> d2;
-  d2.show1();
-  d2.show();
-
+  fun_testtemplateinherit();
   
   return 0;
 }
