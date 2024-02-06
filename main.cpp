@@ -18,9 +18,8 @@ int main()
   //fun_testfan();
   //fun_testfan1();
 
-  fun_testtemplateinherit();
-
-  
+  //fun_testtemplateinherit();
+  fun_testtemplateclassinherit();
   
   return 0;
 }

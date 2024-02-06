@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -144,4 +145,35 @@ inline void fun_testtemplateinherit() {
     d2.show1();
     d2.show();
 }
+
+template<class T1,class T2>
+class A4
+{
+  private:
+  T1 m_a;
+  T2 m_b;
+  public:
+  A4(T1 a,T2 b):m_a(a),m_b(b)
+  {
+
+  }
+  void show()
+  {
+    cout<<"a = " << m_a <<"b = "<<m_b<<endl;
+  }
+};
+template<class T>
+inline void show(T t)
+{
+   
+   t.show();
+}
+
+inline void fun_testtemplateclassinherit()
+{
+
+  A4<int,string> a4(1,"222");
+  show(a4);
+}
+
 #endif
