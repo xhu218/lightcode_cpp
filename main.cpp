@@ -20,7 +20,6 @@ int main()
 
   //fun_testtemplateinherit();
   fun_testtemplateclassinherit();
-  
   return 0;
 }
 

@@ -146,34 +146,32 @@ inline void fun_testtemplateinherit() {
     d2.show();
 }
 
-template<class T1,class T2>
-class A4
-{
+template <class T1, class T2> class A4 {
   private:
-  T1 m_a;
-  T2 m_b;
+    T1 m_a;
+    T2 m_b;
+
   public:
-  A4(T1 a,T2 b):m_a(a),m_b(b)
-  {
-
-  }
-  void show()
-  {
-    cout<<"a = " << m_a <<"b = "<<m_b<<endl;
-  }
+    A4(T1 a, T2 b) : m_a(a), m_b(b) {}
+    void show() { cout << "a = " << m_a << "b = " << m_b << endl; }
+    friend void show1(const A4<T1,T2> & t)
+    {
+      cout<<"a = " << t.m_a << "b = " << t.m_b<<endl;
+    }
 };
-template<class T>
-inline void show(T t)
-{
-   
-   t.show();
-}
+template <class T> inline void show(T t) { t.show(); }
 
-inline void fun_testtemplateclassinherit()
-{
+inline void fun_testtemplateclassinherit() {
 
-  A4<int,string> a4(1,"222");
-  show(a4);
+    A4<int, string> a4(1, "222");
+    show(a4);
+
+    A3 a3;
+    show(a3);
+
+  
+    show1(a4);
+  
 }
 
 #endif
