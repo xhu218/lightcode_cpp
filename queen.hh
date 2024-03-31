@@ -8,6 +8,8 @@ using namespace std;
 #ifndef PERSON_HPP
 #define PERSON_HPP
 
+#define product(x) (x*x)
+
 typedef struct tagMATERIAL {
     int nID;
     int nLength;
@@ -172,6 +174,17 @@ inline void fun_testtemplateclassinherit() {
   
     show1(a4);
   
+}
+//程序员面试宝典
+inline void testp1()
+{
+  int i=3,j,k;
+  j = product(i++);
+  k = product(++i);
+
+  printf("j = %d,k = %d",j,k);
+
+
 }
 
 #endif

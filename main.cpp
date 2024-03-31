@@ -34,12 +34,8 @@ void func1(int (*arr)[5], int n) {
 
 int main() {
 
-    array<array<int, 5>, 5> arr;
-    for (int ii = 0; ii < arr.size(); ii++) {
-        for (int jj = 0; jj < arr[ii].size(); jj++) {
-            arr[ii][jj] = jj * 10 + ii;
-        }
-    }
+
+    
     // func(arr);
 
     int bb[10][5];
@@ -48,6 +44,7 @@ int main() {
             bb[ii][jj] = jj * 10 + ii;
         }
     }
+
     // func1(bb,10);
 
     /*
@@ -65,6 +62,10 @@ int main() {
 
   */
     cout << "aa = " << aa << endl;
+    char *a = new char[1] ;
+    strcpy(a,"hello wfg");
+    char b[] = "hello world";
+    
     // fun_test_copy_construct();
 
     // fun_testpara_const();
