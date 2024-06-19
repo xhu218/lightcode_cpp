@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <string>
+#include <typeinfo>
+
+#include <thread>
+
 using namespace std;
 
 #ifndef PERSON_HPP
@@ -176,15 +180,48 @@ inline void fun_testtemplateclassinherit() {
   
 }
 //程序员面试宝典
+
+class Abc{
+  char d,e;
+  int a;
+};
+struct bcd
+{
+  char d,e;
+  int a;
+};
 inline void testp1()
 {
   int i=3,j,k;
-  j = product(i++);
-  k = product(++i);
+  j = i++*i++;
+  k = ++i*++i;;
 
-  printf("j = %d,k = %d",j,k);
+  printf("j = %d,k = %d\n",j,k);
 
 
+  unsigned int a = 6;
+  int b = -20;
+  if(a+b>6)
+  {printf("greater than 6");}
+  printf("result = %d",a+b);
+
+  char* ss1 = "12345";
+  char ss2[] = "12345";
+
+  printf("sizeof ss1 = %d, sizeof ss2 = %d\n",sizeof(ss1),sizeof(ss2));
+
+  printf("sizeof Abc = %d\n",sizeof(Abc));
+  Abc a1;
+  Abc *a2 = new Abc();
+  Abc *a3;
+  printf("sizeof a1 = %d,a2 = %d, a3 = %d bcd = %d \n",sizeof(a1),sizeof(a2),sizeof(a3),sizeof(bcd));
+  
+}
+
+
+// 线程函数，将在新线程中执行
+inline void threadFunction() {
+    std::cout << "This is a new thread.\n" << std::endl;
 }
 
 #endif
