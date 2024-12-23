@@ -21,7 +21,7 @@ struct student
 int main()
 {
 	char t[20]="this is test";
-	 cout<<t<<endl;
+	cout<<t<<endl;
 	student  s1 ;
 	strcpy(s1.name,"wangfugui");
 	cout<<s1.name<<endl;
