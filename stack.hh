@@ -20,7 +20,7 @@ template <class T> class Stack {
     Stack(int size);
     bool isempty();
     bool isfull();
-    bool enquence(const T & a);
+    bool enquence(const T& a);
     bool dequence(T& it);
     Stack<T>& operator=(const Stack<T>& v);
 
@@ -29,7 +29,7 @@ template <class T> class Stack {
 
 template <class T> Stack<T>::Stack() {
     top = 0;
-    stacksize = 3;
+    stacksize = 1;
     item = new T[stacksize];
 }
 template <class T> Stack<T>::Stack(int size) {
@@ -38,7 +38,7 @@ template <class T> Stack<T>::Stack(int size) {
     item = new T[size];
 }
 
-template <class T> bool Stack<T>::enquence( const T & a) {
+template <class T> bool Stack<T>::enquence(const T& a) {
     if (top < stacksize) {
         item[top++] = a;
         return true;

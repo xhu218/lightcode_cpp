@@ -33,17 +33,17 @@ template <class T> class Vector {
         if (size <= len)
             return;
         T* temp = new T[size];
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < getsize(); i++) {
             temp[i] = items[i];
         }
-        delete [] items;
+        delete[] items;
         items = temp;
         len = size;
     }
 
     T& operator[](int ii) {
         if (ii >= len)
-            resize(ii+1);
+            resize(ii);
         return items[ii];
     }
 
